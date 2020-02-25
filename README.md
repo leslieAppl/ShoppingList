@@ -9,5 +9,5 @@
         - textLabel detailTextLabel and imageView
     - Added cell.accessoryType.checkmark property
 
-
+- refactor dedicated TableView DataSource Class
 

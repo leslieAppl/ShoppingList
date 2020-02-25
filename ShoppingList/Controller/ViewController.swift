@@ -9,61 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let datasource = TableViewDataSource()
+    let delegate = TableViewDataSource()
 
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        tableView.dataSource = datasource
+        tableView.delegate = delegate
+            
+        tableView.separatorStyle = .none
+        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     }
     
     
 }
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate {
-    
-    //MARK: - Table Data Source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return items.count
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let row = indexPath.row
-        let section = indexPath.section
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.textLabel?.text = items[row]
-        cell.detailTextLabel?.text = descriptions[row]
-        cell.imageView?.image = UIImage(named: images[row])
-        
-        if selected[row] {
-            cell.accessoryType = .checkmark
-        }
-        
-        return cell
-    }
-    
-    //MARK: - Table Delegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let cell = tableView.cellForRow(at: indexPath)
-        let row = indexPath.row
-        
-        if selected[row] {
-            cell?.accessoryType = .none
-            selected[row] = false
-        } else {
-            cell?.accessoryType = .checkmark
-            selected[row] = true
-        }
-        
-        // After user selected the cell, have to manually deselect the cell row.
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-}
