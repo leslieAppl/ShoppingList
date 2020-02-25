@@ -8,6 +8,14 @@
 
 import Foundation
 
+enum ViewMode {
+    
+    case Simple
+    case Food
+}
+
+var currentViewModeValue: ViewMode = .Simple
+
 var indexLetters: [String] = ["#", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 var categories: [String] = ["B", "C", "D", "G", "J", "L", "M", "O", "P", "T", "Y"]

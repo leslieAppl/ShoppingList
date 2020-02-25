@@ -10,6 +10,9 @@ import UIKit
 
 class FoodCell: UITableViewCell {
 
+    @IBOutlet weak var foodLbl: UILabel!
+    @IBOutlet weak var foodImg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +24,15 @@ class FoodCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configureCell(at index: IndexPath) {
+        
+        let row = index.row
+        let title = items1D[row]
+        
+        self.foodLbl.text = title
+        
+        if let image = images2D[title] {
+            self.foodImg.image = UIImage(named: image)
+        }    
+    }
 }
