@@ -18,6 +18,8 @@
 		CE8BA7042403B4FE00D75DCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8BA7032403B4FE00D75DCC /* Assets.xcassets */; };
 		CE8BA7072403B4FE00D75DCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE8BA7052403B4FE00D75DCC /* LaunchScreen.storyboard */; };
 		CE8BA70F2403BBBE00D75DCC /* DataTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA70E2403BBBE00D75DCC /* DataTemp.swift */; };
+		CE9F0FDB240559980049847A /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F0FDA240559980049847A /* AppData.swift */; };
+		CE9F0FDD240565DC0049847A /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F0FDC240565DC0049847A /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		CE8BA7062403B4FE00D75DCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE8BA7082403B4FE00D75DCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE8BA70E2403BBBE00D75DCC /* DataTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTemp.swift; sourceTree = "<group>"; };
+		CE9F0FDA240559980049847A /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		CE9F0FDC240565DC0049847A /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				CE8BA6FE2403B4FA00D75DCC /* ViewController.swift */,
+				CE9F0FDC240565DC0049847A /* DetailVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -99,6 +104,7 @@
 		CE8BA7122403BBD300D75DCC /* Modle */ = {
 			isa = PBXGroup;
 			children = (
+				CE9F0FDA240559980049847A /* AppData.swift */,
 				CE8BA70E2403BBBE00D75DCC /* DataTemp.swift */,
 				CE0E8AD9240510B900552080 /* TableViewDataSource.swift */,
 				CE0E8ADB2405196400552080 /* FoodTableViewDataSource.swift */,
@@ -181,7 +187,9 @@
 				CE0E8ADA240510B900552080 /* TableViewDataSource.swift in Sources */,
 				CE8BA6FF2403B4FA00D75DCC /* ViewController.swift in Sources */,
 				CE0E8ADC2405196400552080 /* FoodTableViewDataSource.swift in Sources */,
+				CE9F0FDB240559980049847A /* AppData.swift in Sources */,
 				CE8BA70F2403BBBE00D75DCC /* DataTemp.swift in Sources */,
+				CE9F0FDD240565DC0049847A /* DetailVC.swift in Sources */,
 				CE0E8AD724050EE600552080 /* FoodCell.swift in Sources */,
 				CE8BA6FB2403B4FA00D75DCC /* AppDelegate.swift in Sources */,
 				CE8BA6FD2403B4FA00D75DCC /* SceneDelegate.swift in Sources */,

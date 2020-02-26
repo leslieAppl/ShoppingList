@@ -27,11 +27,11 @@ class FoodCell: UITableViewCell {
     func configureCell(at index: IndexPath) {
         
         let row = index.row
-        let title = items1D[row]
+        let title = AppData.instance.items[row]
         
-        self.foodLbl.text = title
+        self.foodLbl.text = AppData.instance.items[row]
         
-        if let image = images2D[title] {
+        if let image = AppData.instance.details[title]?.first {
             self.foodImg.image = UIImage(named: image)
         }    
     }

@@ -10,9 +10,12 @@ import UIKit
 
 class FoodTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     
+    
+
     //MARK: - Table Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items1D.count
+        let data = AppData.instance.items
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -22,9 +25,5 @@ class FoodTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
         cell.configureCell(at: indexPath)
         
         return cell
-    }
-    
-    //MARK: - Table Delegate
-    
-    
+    }    
 }

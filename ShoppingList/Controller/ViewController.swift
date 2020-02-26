@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     let simpleDelegate = TableViewDataSource()
     
     let foodDataSource = FoodTableViewDataSource()
-    let foodDelegate = FoodTableViewDataSource()
+//    let foodDelegate = FoodTableViewDataSource()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +22,31 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setupSimpleTableView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        
+        if let path = tableView.indexPathForSelectedRow {
+            
+            tableView.deselectRow(at: path, animated: true)
+            
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "showDetailVC" {
+            
+            let detailVC = segue.destination as! DetailVC
+            
+
+            if let path = tableView.indexPathForSelectedRow {
+
+                detailVC.selected = path.row
+
+            }
+        }
     }
     
     @IBAction func switchBtnPressed(_ sender: Any) {
@@ -56,7 +81,7 @@ class ViewController: UIViewController {
     func setupFoodTableView() {
         
         tableView.dataSource = foodDataSource
-        tableView.delegate = foodDelegate
+        tableView.delegate = self
         
         // TODO: Registers a nib object containing a cell with the table view
         // The UINib object looks for the nib file in the bundle's
@@ -69,3 +94,13 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: UITableViewDelegate {
+
+    //MARK: - Table Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        performSegue(withIdentifier: "showDetailVC", sender: self)
+
+    }
+
+}

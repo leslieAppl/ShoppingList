@@ -10,4 +10,7 @@
     - Added cell.accessoryType.checkmark property
 
 - refactor dedicated TableView DataSource Class
+- refactor dedicated TableView Delegate Class is not convinience!!
+
+- Passing Data between ViewController with 'segue'
 
