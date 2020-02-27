@@ -9,8 +9,6 @@
 import UIKit
 
 class FoodTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
-    
-    
 
     //MARK: - Table Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,5 +23,15 @@ class FoodTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
         cell.configureCell(at: indexPath)
         
         return cell
-    }    
+    }
+    
+//    //MARK: - Table Delegate
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = storyBoard.instantiateViewController(withIdentifier: "viewController") as! ViewController
+//        viewController.performSegue(withIdentifier: "showDetailVC", sender: self)
+//
+//    }
+
 }
