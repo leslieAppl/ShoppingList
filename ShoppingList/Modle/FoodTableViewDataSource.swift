@@ -8,17 +8,7 @@
 
 import UIKit
 
-//MARK: step 1 Add Protocol here
-protocol DataSourceDelegate: class {
-    
-    func didSelectGoToDetailVC(dataSource: FoodTableViewDataSource)
-    
-}
-
 class FoodTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
-    
-    //MARK: step 2 Create a delegate property here, don't forget to make it weak!
-    weak var myDelegate: DataSourceDelegate?
 
     //MARK: - Table Data Source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,12 +25,13 @@ class FoodTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
         return cell
     }
     
-    //MARK: - Table Delegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        //MARK: step 3 Add the delegate method call here
-        myDelegate?.didSelectGoToDetailVC(dataSource: self)
-        
-    }
+//    //MARK: - Table Delegate
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = storyBoard.instantiateViewController(withIdentifier: "viewController") as! ViewController
+//        viewController.performSegue(withIdentifier: "showDetailVC", sender: self)
+//
+//    }
 
 }

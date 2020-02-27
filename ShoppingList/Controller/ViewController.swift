@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     let simpleDelegate = TableViewDataSource()
     
     let foodDataSource = FoodTableViewDataSource()
-    let foodDelegate = FoodTableViewDataSource()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -31,22 +30,18 @@ class ViewController: UIViewController {
         super.viewWillDisappear(true)
         
         if let path = tableView.indexPathForSelectedRow {
-            
+
             tableView.deselectRow(at: path, animated: true)
-            
+
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        //MARK: step 5 create a reference of Class B and bind them through the prepareforsegue method
-//        foodDataSource.myDelegate = self
-        
         if segue.identifier == "showDetailVC" {
             
             let detailVC = segue.destination as! DetailVC
             
-
             if let path = tableView.indexPathForSelectedRow {
 
                 detailVC.selected = path.row
@@ -87,8 +82,7 @@ class ViewController: UIViewController {
     func setupFoodTableView() {
         
         tableView.dataSource = foodDataSource
-        tableView.delegate = foodDelegate
-        foodDataSource.myDelegate = self  // assign 'self' into the custom 'delegate' of 'DataSource'
+        tableView.delegate = self
 
         // TODO: Registers a nib object containing a cell with the table view
         // The UINib object looks for the nib file in the bundle's
@@ -96,18 +90,6 @@ class ViewController: UIViewController {
 
         tableView.separatorStyle = .none
 
-
-    }
-
-}
-
-extension ViewController: DataSourceDelegate {
-    
-    //MARK: step 6 finally use the method of the contract here
-    func didSelectGoToDetailVC(dataSource: FoodTableViewDataSource) {
-        
-        print("didSelectGoToDetailVC called")
-        performSegue(withIdentifier: "showDetailVC", sender: self)
 
     }
 
