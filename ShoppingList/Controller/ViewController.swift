@@ -82,12 +82,13 @@ class ViewController: UIViewController {
         
         tableView.dataSource = foodDataSource
         tableView.delegate = self
-        
+
         // TODO: Registers a nib object containing a cell with the table view
         // The UINib object looks for the nib file in the bundle's
         tableView.register(UINib.init(nibName: "FoodCell", bundle: nil), forCellReuseIdentifier: "foodCell")
         
         tableView.separatorStyle = .none
+        
         
         
     }
@@ -104,3 +105,4 @@ extension ViewController: UITableViewDelegate {
     }
 
 }
+
