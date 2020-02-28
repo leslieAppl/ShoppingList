@@ -14,8 +14,9 @@
 
 - Passing Data between ViewController with 'segue'
 - present ViewController from UIApplication.windows[0].rootViewController
-    //MARK: - Table Delegate
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        //MARK: - Table Delegate
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         let detailVC = storyBoard.instantiateViewController(identifier: "detailVC") as! DetailVC
