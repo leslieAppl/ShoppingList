@@ -21,7 +21,11 @@ class FoodCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+        if selected {
+            
+            self.setSelected(false, animated: true)
+            
+        }
     }
     
     func configureCell(at index: IndexPath) {
@@ -33,6 +37,8 @@ class FoodCell: UITableViewCell {
         
         if let image = AppData.instance.details[title]?.first {
             self.foodImg.image = UIImage(named: image)
-        }    
+        }
+        
     }
+    
 }

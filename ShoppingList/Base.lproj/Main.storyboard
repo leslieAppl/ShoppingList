@@ -58,11 +58,28 @@
                     <connections>
                         <outlet property="tableView" destination="vAf-7D-vQm" id="T44-1g-0Hh"/>
                         <segue destination="C1X-fg-q7j" kind="show" identifier="showDetailVC" id="sP7-e0-tzi"/>
+                        <segue destination="oDZ-lB-clL" kind="show" identifier="showDetailVC2" id="7N5-qZ-kg9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="859" y="127"/>
+        </scene>
+        <!--DetailVC2-->
+        <scene sceneID="JbX-lh-38Y">
+            <objects>
+                <viewController storyboardIdentifier="detailVC2" id="oDZ-lB-clL" customClass="DetailVC2" customModule="ShoppingList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p6T-dK-yL9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="m98-fk-R3i"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sdo-7x-479"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JBI-Wc-VCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="806"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="lXJ-ay-Sob">
@@ -123,7 +140,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ty7-Ea-DgL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pri-fa-Neh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="Pri-fa-Neh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DCe-jP-1rr">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

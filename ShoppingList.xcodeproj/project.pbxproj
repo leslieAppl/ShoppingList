@@ -11,6 +11,7 @@
 		CE0E8AD824050EE600552080 /* FoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0E8AD624050EE600552080 /* FoodCell.xib */; };
 		CE0E8ADA240510B900552080 /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E8AD9240510B900552080 /* TableViewDataSource.swift */; };
 		CE0E8ADC2405196400552080 /* FoodTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0E8ADB2405196400552080 /* FoodTableViewDataSource.swift */; };
+		CE84307F2408C8DF0057D6F9 /* DetailVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE84307E2408C8DF0057D6F9 /* DetailVC2.swift */; };
 		CE8BA6FB2403B4FA00D75DCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA6FA2403B4FA00D75DCC /* AppDelegate.swift */; };
 		CE8BA6FD2403B4FA00D75DCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA6FC2403B4FA00D75DCC /* SceneDelegate.swift */; };
 		CE8BA6FF2403B4FA00D75DCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA6FE2403B4FA00D75DCC /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		CE0E8AD624050EE600552080 /* FoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodCell.xib; sourceTree = "<group>"; };
 		CE0E8AD9240510B900552080 /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		CE0E8ADB2405196400552080 /* FoodTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewDataSource.swift; sourceTree = "<group>"; };
+		CE84307E2408C8DF0057D6F9 /* DetailVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC2.swift; sourceTree = "<group>"; };
 		CE8BA6F72403B4FA00D75DCC /* ShoppingList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8BA6FA2403B4FA00D75DCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8BA6FC2403B4FA00D75DCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				CE8BA6FE2403B4FA00D75DCC /* ViewController.swift */,
 				CE9F0FDC240565DC0049847A /* DetailVC.swift */,
+				CE84307E2408C8DF0057D6F9 /* DetailVC2.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE84307F2408C8DF0057D6F9 /* DetailVC2.swift in Sources */,
 				CE0E8ADA240510B900552080 /* TableViewDataSource.swift in Sources */,
 				CE8BA6FF2403B4FA00D75DCC /* ViewController.swift in Sources */,
 				CE0E8ADC2405196400552080 /* FoodTableViewDataSource.swift in Sources */,
