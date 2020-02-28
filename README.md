@@ -5,6 +5,7 @@
 
 ## Workflow
 - Created Basic prototype table cell
+-- aaa
     - Using default properties of basic cell prototype: 
         - textLabel detailTextLabel and imageView
     - Added cell.accessoryType.checkmark property
