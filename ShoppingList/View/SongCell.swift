@@ -10,6 +10,7 @@ import UIKit
 
 class SongCell: UITableViewCell {
     
+    // referring table cell-contentView to custom .xib view file and its view class file
     @IBOutlet weak var songView: SongView!
     
     override func awakeFromNib() {

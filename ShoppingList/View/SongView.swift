@@ -9,7 +9,9 @@
 import UIKit
 
 class SongView: UIView {
-
+    
+    // observer for AUTO updating 'Song' Struct Data
+    // and transtlating 'Song' into 'Table Cell's contentView'(
     var song: Song! {
         
         didSet {
@@ -23,7 +25,8 @@ class SongView: UIView {
             print(titleLbl.text)
         }
     }
-
+    
+    // referring .xib 'contentView' object to the 'SongView' class
     @IBOutlet var contentView: UIView!
     
     @IBOutlet weak var albumCoverImage: UIImageView!
@@ -40,13 +43,6 @@ class SongView: UIView {
     }
     
     // init custom view via storyboard:
-//    required init?(coder aDecoder: NSCoder) {
-//        super.init(coder: aDecoder)
-//
-//        commonInit()
-//    }
-    
-    // init custom view via storyboard:
     required init?(coder: NSCoder) {
         super.init(coder: coder)
 
@@ -54,6 +50,13 @@ class SongView: UIView {
 
     }
         
+        // init custom view via storyboard:
+    //    required init?(coder aDecoder: NSCoder) {
+    //        super.init(coder: aDecoder)
+    //
+    //        commonInit()
+    //    }
+    
     func commonInit() {
         
         // Add .xib file by Bundle.main with the Nib Name
