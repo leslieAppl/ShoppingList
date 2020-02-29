@@ -18,8 +18,9 @@ class FoodTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as! FoodCell
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as? FoodCell else { return UITableViewCell()}
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as! FoodCell
+
         cell.configureCell(at: indexPath)
         
         return cell
@@ -29,10 +30,12 @@ class FoodTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyBoard.instantiateViewController(withIdentifier: "viewController") as! ViewController
         let detailVC = storyBoard.instantiateViewController(identifier: "detailVC") as! DetailVC
         
         detailVC.selected = indexPath.row
         
+//        vc.present(detailVC, animated: true, completion: nil)
         UIApplication.shared.windows[0].rootViewController?.present(detailVC, animated: true, completion: nil)
         
         // 'keyWindow' was deprecated in iOS 13.0: Should not be used for applications
@@ -42,7 +45,7 @@ class FoodTableViewDataSource: NSObject, UITableViewDataSource, UITableViewDeleg
         // Cause there is no 'segue' for the hierarchy ViewController system in the TavleViewCell.xib file. [error: whose view is not in the window hierarchy!]
         // So 'performSegue(withIdentifier: String, sender: Any?)' in the UIViewController Class is invalidated.
 //        let viewController = storyBoard.instantiateViewController(withIdentifier: "viewController") as! ViewController
-//        vc.performSegue(withIdentifier: "showDetailVC", sender: self)
+//        detailVC.performSegue(withIdentifier: "showDetailVC", sender: self)
         
     }
 }

@@ -5,7 +5,7 @@
 
 ## Workflow
 - Created Basic prototype table cell
--- aaa
+
     - Using default properties of basic cell prototype: 
         - textLabel detailTextLabel and imageView
     - Added cell.accessoryType.checkmark property
@@ -26,4 +26,8 @@
         
         UIApplication.shared.windows[0].rootViewController?.present(detailVC, animated: true, completion: nil)
     }
+
+- Added independent .xib Custom UIView for configuring table Data Source and table Cell
+    - Resource: https://medium.com/@tjcarney89/whats-a-xib-and-why-would-i-ever-use-one-58d608cd5e9b
+    - By: TJ Carney
 

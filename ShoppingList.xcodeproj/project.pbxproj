@@ -21,6 +21,11 @@
 		CE8BA70F2403BBBE00D75DCC /* DataTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA70E2403BBBE00D75DCC /* DataTemp.swift */; };
 		CE9F0FDB240559980049847A /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F0FDA240559980049847A /* AppData.swift */; };
 		CE9F0FDD240565DC0049847A /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9F0FDC240565DC0049847A /* DetailVC.swift */; };
+		CEF99AF8240A314B00882DCB /* SongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99AF7240A314B00882DCB /* SongView.swift */; };
+		CEF99AFA240A367200882DCB /* SongView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF99AF9240A367200882DCB /* SongView.xib */; };
+		CEF99AFC240A594100882DCB /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99AFB240A594100882DCB /* Song.swift */; };
+		CEF99AFE240A5DC700882DCB /* MusicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99AFD240A5DC700882DCB /* MusicLibrary.swift */; };
+		CEF99B00240A6AA600882DCB /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99AFF240A6AA600882DCB /* SongCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		CE8BA70E2403BBBE00D75DCC /* DataTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTemp.swift; sourceTree = "<group>"; };
 		CE9F0FDA240559980049847A /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		CE9F0FDC240565DC0049847A /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		CEF99AF7240A314B00882DCB /* SongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongView.swift; sourceTree = "<group>"; };
+		CEF99AF9240A367200882DCB /* SongView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongView.xib; sourceTree = "<group>"; };
+		CEF99AFB240A594100882DCB /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		CEF99AFD240A5DC700882DCB /* MusicLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibrary.swift; sourceTree = "<group>"; };
+		CEF99AFF240A6AA600882DCB /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,9 @@
 			children = (
 				CE0E8AD524050EE600552080 /* FoodCell.swift */,
 				CE0E8AD624050EE600552080 /* FoodCell.xib */,
+				CEF99AF7240A314B00882DCB /* SongView.swift */,
+				CEF99AF9240A367200882DCB /* SongView.xib */,
+				CEF99AFF240A6AA600882DCB /* SongCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -111,6 +124,8 @@
 				CE8BA70E2403BBBE00D75DCC /* DataTemp.swift */,
 				CE0E8AD9240510B900552080 /* TableViewDataSource.swift */,
 				CE0E8ADB2405196400552080 /* FoodTableViewDataSource.swift */,
+				CEF99AFB240A594100882DCB /* Song.swift */,
+				CEF99AFD240A5DC700882DCB /* MusicLibrary.swift */,
 			);
 			path = Modle;
 			sourceTree = "<group>";
@@ -175,6 +190,7 @@
 			files = (
 				CE8BA7072403B4FE00D75DCC /* LaunchScreen.storyboard in Resources */,
 				CE0E8AD824050EE600552080 /* FoodCell.xib in Resources */,
+				CEF99AFA240A367200882DCB /* SongView.xib in Resources */,
 				CE8BA7042403B4FE00D75DCC /* Assets.xcassets in Resources */,
 				CE8BA7022403B4FA00D75DCC /* Main.storyboard in Resources */,
 			);
@@ -187,7 +203,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF99AFC240A594100882DCB /* Song.swift in Sources */,
 				CE84307F2408C8DF0057D6F9 /* DetailVC2.swift in Sources */,
+				CEF99AF8240A314B00882DCB /* SongView.swift in Sources */,
 				CE0E8ADA240510B900552080 /* TableViewDataSource.swift in Sources */,
 				CE8BA6FF2403B4FA00D75DCC /* ViewController.swift in Sources */,
 				CE0E8ADC2405196400552080 /* FoodTableViewDataSource.swift in Sources */,
@@ -195,6 +213,8 @@
 				CE8BA70F2403BBBE00D75DCC /* DataTemp.swift in Sources */,
 				CE9F0FDD240565DC0049847A /* DetailVC.swift in Sources */,
 				CE0E8AD724050EE600552080 /* FoodCell.swift in Sources */,
+				CEF99B00240A6AA600882DCB /* SongCell.swift in Sources */,
+				CEF99AFE240A5DC700882DCB /* MusicLibrary.swift in Sources */,
 				CE8BA6FB2403B4FA00D75DCC /* AppDelegate.swift in Sources */,
 				CE8BA6FD2403B4FA00D75DCC /* SceneDelegate.swift in Sources */,
 			);

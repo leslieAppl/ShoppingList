@@ -49,16 +49,24 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="aZe-8h-Hzz">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="Oj2-2Q-LlY">
-                            <connections>
-                                <action selector="switchBtnPressed:" destination="BYZ-38-t0r" id="hrX-N5-h8P"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Food" id="Oj2-2Q-LlY">
+                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="switchBtnPressed:" destination="BYZ-38-t0r" id="hrX-N5-h8P"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Song" id="ayf-Hp-DiG">
+                                <color key="tintColor" red="0.29852169750000002" green="0.75442785020000003" blue="0.33716404439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <segue destination="oDZ-lB-clL" kind="show" id="OVJ-Cy-vva"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="vAf-7D-vQm" id="T44-1g-0Hh"/>
                         <segue destination="C1X-fg-q7j" kind="show" identifier="showDetailVC" id="sP7-e0-tzi"/>
-                        <segue destination="oDZ-lB-clL" kind="show" identifier="showDetailVC2" id="7N5-qZ-kg9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,14 +80,54 @@
                     <view key="view" contentMode="scaleToFill" id="p6T-dK-yL9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="I64-oW-zvg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCell" rowHeight="100" id="a8I-0M-YXz" customClass="SongCell" customModule="ShoppingList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a8I-0M-YXz" id="vUu-nR-U2N">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rYK-Hz-387" customClass="SongView" customModule="ShoppingList" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rYK-Hz-387" secondAttribute="trailing" id="Guj-NV-cEK"/>
+                                                <constraint firstItem="rYK-Hz-387" firstAttribute="top" secondItem="vUu-nR-U2N" secondAttribute="top" id="URB-X0-gSu"/>
+                                                <constraint firstItem="rYK-Hz-387" firstAttribute="leading" secondItem="vUu-nR-U2N" secondAttribute="leading" id="cqU-oT-kkk"/>
+                                                <constraint firstAttribute="bottom" secondItem="rYK-Hz-387" secondAttribute="bottom" id="whQ-WS-EEL"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="songView" destination="rYK-Hz-387" id="ryC-SP-1bJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="I64-oW-zvg" firstAttribute="top" secondItem="m98-fk-R3i" secondAttribute="top" id="6vv-pU-mmB"/>
+                            <constraint firstItem="I64-oW-zvg" firstAttribute="bottom" secondItem="m98-fk-R3i" secondAttribute="bottom" id="CWA-2H-kfU"/>
+                            <constraint firstItem="I64-oW-zvg" firstAttribute="trailing" secondItem="m98-fk-R3i" secondAttribute="trailing" id="Sdf-KC-JmK"/>
+                            <constraint firstItem="I64-oW-zvg" firstAttribute="leading" secondItem="m98-fk-R3i" secondAttribute="leading" id="cTD-B1-IIC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="m98-fk-R3i"/>
                     </view>
                     <navigationItem key="navigationItem" id="sdo-7x-479"/>
+                    <connections>
+                        <outlet property="tableView" destination="I64-oW-zvg" id="VFt-aB-fZ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JBI-Wc-VCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="806"/>
+            <point key="canvasLocation" x="857.97101449275374" y="805.58035714285711"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="lXJ-ay-Sob">

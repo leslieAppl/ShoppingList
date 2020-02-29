@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SongView" customModule="ShoppingList" customModuleProvider="target">
+            <connections>
+                <outlet property="albumCoverImage" destination="rKM-y6-xHO" id="4YG-St-Ig3"/>
+                <outlet property="albumLbl" destination="b4h-aS-ATF" id="e6J-9E-szX"/>
+                <outlet property="artistLbl" destination="602-SA-Vxg" id="ULa-6x-Kih"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="HP1-TN-Wku"/>
+                <outlet property="titleLbl" destination="i8S-2u-Hxo" id="sh7-Ka-UHv"/>
+                <outlet property="yearLbl" destination="Xah-vI-ClB" id="oJ9-QJ-3hw"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="A Night at the Opera" translatesAutoresizingMaskIntoConstraints="NO" id="rKM-y6-xHO">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="Smr-E4-XCE"/>
+                        <constraint firstAttribute="height" constant="100" id="uFp-5D-SGr"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Beatles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="602-SA-Vxg">
+                    <rect key="frame" x="120" y="36" width="81" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="0.75" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abbey Road" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4h-aS-ATF">
+                    <rect key="frame" x="120" y="59" width="83" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="0.75" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1969" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xah-vI-ClB">
+                    <rect key="frame" x="355" y="10" width="39" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.29852169750000002" green="0.75442785020000003" blue="0.33716404439999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Come Together" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8S-2u-Hxo">
+                    <rect key="frame" x="120" y="10" width="200" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="D5y-hB-QFb"/>
+                        <constraint firstAttribute="width" constant="200" id="Mlu-Zo-HjC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="0.75" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Xah-vI-ClB" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="0fB-hd-Kn1"/>
+                <constraint firstAttribute="trailing" secondItem="Xah-vI-ClB" secondAttribute="trailing" constant="20" id="5qY-zX-EeU"/>
+                <constraint firstItem="rKM-y6-xHO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="JtV-K9-q9c"/>
+                <constraint firstItem="b4h-aS-ATF" firstAttribute="leading" secondItem="rKM-y6-xHO" secondAttribute="trailing" constant="20" id="QLh-Lg-xXI"/>
+                <constraint firstItem="602-SA-Vxg" firstAttribute="leading" secondItem="rKM-y6-xHO" secondAttribute="trailing" constant="20" id="WTX-7e-EU1"/>
+                <constraint firstItem="602-SA-Vxg" firstAttribute="top" secondItem="i8S-2u-Hxo" secondAttribute="bottom" constant="5" id="YIs-h4-seE"/>
+                <constraint firstItem="rKM-y6-xHO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dIA-Ne-BFv"/>
+                <constraint firstItem="i8S-2u-Hxo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="gCH-5y-UsE"/>
+                <constraint firstItem="i8S-2u-Hxo" firstAttribute="leading" secondItem="rKM-y6-xHO" secondAttribute="trailing" constant="20" id="tGW-8V-QXx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rKM-y6-xHO" secondAttribute="bottom" id="tc2-K1-qeC"/>
+                <constraint firstItem="b4h-aS-ATF" firstAttribute="top" secondItem="602-SA-Vxg" secondAttribute="bottom" constant="5" id="ws1-dK-Pdl"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="141.29464285714286"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="A Night at the Opera" width="226" height="223"/>
+    </resources>
+</document>

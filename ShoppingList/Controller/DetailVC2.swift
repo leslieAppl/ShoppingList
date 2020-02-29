@@ -9,22 +9,45 @@
 import UIKit
 
 class DetailVC2: UIViewController {
-
+    
+    var musicLibrary = MusicLibrary()
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        tableView.separatorColor = #colorLiteral(red: 0.9411764741, green: 0.4980392158, blue: 0.3529411852, alpha: 1)
     }
     
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension DetailVC2: UITableViewDataSource, UITableViewDelegate {
+    
+    //MARK: - Table Data Source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return musicLibrary.songs.count
+        
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "songCell", for: indexPath) as? SongCell else { return UITableViewCell() }
+        
+        let currentSong = musicLibrary.songs[indexPath.row]
+        
+        cell.songView.song = currentSong
+        
+        return cell
+        
+    }
+    
+    
+    //MARK: - Table Delegate
+    
+    
 }
