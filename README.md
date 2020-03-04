@@ -31,3 +31,5 @@
     - Resource: https://medium.com/@tjcarney89/whats-a-xib-and-why-would-i-ever-use-one-58d608cd5e9b
     - By: TJ Carney
 
+- Built AddItemVC
+- Using 'delegate' Concept 

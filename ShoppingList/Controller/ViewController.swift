@@ -48,7 +48,24 @@ class ViewController: UIViewController {
                 detailVC.selected = path.row
 
             }
+        } else if segue.identifier == "showAddItem" {
+            
+            let addItemVC = segue.destination as! AddItemVC
+            
+            // assign self type into ‘AddItemVC.delegate’ 
+            addItemVC.delegate = self
         }
+    }
+    
+    func saveItem(title: String) {
+        
+        let lower = title.lowercased()
+        let final = lower.capitalized
+        AppData.instance.items.append(final)
+        AppData.instance.details[final] = ["no image", "not defined"]
+        tableView.reloadData()
+        navigationController?.popViewController(animated: true)
+        
     }
     
     @IBAction func switchBtnPressed(_ sender: Any) {

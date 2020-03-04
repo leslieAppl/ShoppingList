@@ -26,6 +26,7 @@
 		CEF99AFC240A594100882DCB /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99AFB240A594100882DCB /* Song.swift */; };
 		CEF99AFE240A5DC700882DCB /* MusicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99AFD240A5DC700882DCB /* MusicLibrary.swift */; };
 		CEF99B00240A6AA600882DCB /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF99AFF240A6AA600882DCB /* SongCell.swift */; };
+		CEFF268B240F203D00437F2E /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFF268A240F203D00437F2E /* AddItemVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		CEF99AFB240A594100882DCB /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		CEF99AFD240A5DC700882DCB /* MusicLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibrary.swift; sourceTree = "<group>"; };
 		CEF99AFF240A6AA600882DCB /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		CEFF268A240F203D00437F2E /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				CE8BA6FE2403B4FA00D75DCC /* ViewController.swift */,
 				CE9F0FDC240565DC0049847A /* DetailVC.swift */,
 				CE84307E2408C8DF0057D6F9 /* DetailVC2.swift */,
+				CEFF268A240F203D00437F2E /* AddItemVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				CE8BA70F2403BBBE00D75DCC /* DataTemp.swift in Sources */,
 				CE9F0FDD240565DC0049847A /* DetailVC.swift in Sources */,
 				CE0E8AD724050EE600552080 /* FoodCell.swift in Sources */,
+				CEFF268B240F203D00437F2E /* AddItemVC.swift in Sources */,
 				CEF99B00240A6AA600882DCB /* SongCell.swift in Sources */,
 				CEF99AFE240A5DC700882DCB /* MusicLibrary.swift in Sources */,
 				CE8BA6FB2403B4FA00D75DCC /* AppDelegate.swift in Sources */,
